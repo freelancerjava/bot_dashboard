@@ -4,7 +4,7 @@ import React from "react";
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col, Table } from "reactstrap";
 
-const DashboardHeader = ({ reports }) => {
+const DashboardHeader = ({ orders }) => {
   return (
     <>
       <div className="header bg-gradient-green pb-8 pt-5 pt-md-7">
@@ -222,7 +222,7 @@ const DashboardHeader = ({ reports }) => {
                   </thead> */}
                   <tbody>
                     {
-                      reports.map((item) => {
+                      orders.map((item) => {
                         return (
                           <tr>
                             <td>

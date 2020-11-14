@@ -12,8 +12,6 @@ import Tables from './views/examples/Tables';
 import Login from './views/examples/Login';
 import Register from './views/examples/Register';
 import Auth from './layouts/Auth';
-import Reports from './views/examples/reports';
-import SectionLayout from './layouts/SectionLayout';
 
 export default {
   path: 'dashboard',
@@ -54,29 +52,11 @@ export default {
       icon: "ni ni-bullet-list-67 text-red",
       component: Tables,
       layout: "/dashboard"
-    },
-    {
-      path: "/reports",
-      name: "Reports",
-      icon: "ni ni-bullet-list-67 text-red",
-      component: Reports,
-      layout: "/dashboard"
     }
 
   ],
 };
 
-export const sectionRoute = {
-  path: "/section",
-  component: SectionLayout,
-  childRoutes: [
-    {
-      path: "/index",
-      component: Tables,
-      layout: "/section"
-    }
-  ]
-}
 
 export const authRoute = {
   path: "/auth",
