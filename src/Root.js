@@ -60,4 +60,39 @@ function Root() {
   );
 }
 
-export default hot(module)(Root);
+
+
+
+export class Example extends React.Component {
+  state = {
+    arr: [
+      "item1",
+      "item2",
+      "item3",
+      "item4",
+      "item5",
+    ]
+  }
+  render() {
+    return (
+      <>
+        <input type="text" placeholder="search" onChange={(e) => {
+          this.setState({
+            arr: [...this.state.arr, e.target.value]
+          })
+
+        }} />
+        <ul>
+          {
+            this.state.arr.map(item => {
+              return <li>{item}</li>
+            })
+          }
+        </ul>
+      </>
+    )
+  }
+}
+
+
+export default hot(module)(Example);
